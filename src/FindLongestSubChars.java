@@ -49,8 +49,8 @@ public class FindLongestSubChars {
  *          Vòng lặp trong: n - x
  *              Câu lệnh trong vòng lặp trong: O(1)
  *
- *      T(n) = O(c + n * (c + (n - x) * c))         (x = (n-1)...1)
- *           = O(c + n * c + n^2 * c - n * x * c)
+ *      T(n) = O(c + n * (c + (n - x) * c))         (n-1 >= x >= 1)
+ *           = O(c + n * c + n * (n - 1) * c)
  *           = O(n^2)
  *      => Độ phức tạp thời gian của bài toán là O(n^2)
  */
