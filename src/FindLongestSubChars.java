@@ -38,3 +38,19 @@ public class FindLongestSubChars {
 		return outputString;
 	}
 }
+
+/**     Phân tích độ phức tạp thời gian của chương trình
+ *     thông qua phân tích số phép tính của hàm findSubChars
+ *     (Cỡ của dữ liệu truyền vào (Độ dài String truyền vào hàm) là n)
+ *
+ *      Các câu lệnh trước và sau vòng lặp ngoài: O(1)
+ *      Vòng lặp ngoài: n
+ *          Các câu lệnh trước và sau vòng lặp trong: O(1)
+ *          Vòng lặp trong: n - x
+ *              Câu lệnh trong vòng lặp trong: O(1)
+ *
+ *      T(n) = O(c + n * (c + (n - x) * c))         (x = (n-1)...1)
+ *           = O(c + n * c + n^2 * c - n * x * c)
+ *           = O(n^2)
+ *      => Độ phức tạp thời gian của bài toán là O(n^2)
+ */
